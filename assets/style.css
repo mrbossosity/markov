@@ -1,0 +1,114 @@
+body {
+  height: 100vh;
+  margin: 0;
+  font-family: monospace;
+  background-color: rgb(80, 91, 102);
+}
+
+.container {
+  height: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto 1fr auto;
+  grid-column-gap: 2px;
+}
+
+.top-box {
+  grid-column: 1 / -1;
+  grid-row: 1 / 2;
+  padding: 0 10px 0 10px;
+  background-color: white;
+  border-bottom: 0.22rem solid dimgray;
+}
+
+.left-box, .right-box {
+  padding: 10px
+}
+
+.left-box {
+  grid-column: 1 / 2;
+  grid-row: 2 / 3;
+  background-color: lightsteelblue;
+}
+
+.right-box {
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
+  background-color: lavenderblush;
+  overflow: scroll
+}
+
+form > div {
+  margin-bottom: 0.5em;
+}
+
+form > div > button {
+  font-family: monospace;
+  font-size: 1.1em;
+  text-align: center;
+  border: 0.2em solid lightslategray;
+  border-radius: 0.4em;
+  cursor: pointer;
+  transition: 0.15s ease
+}
+
+form > div > button:hover {
+  font-size: 1.25em
+}
+
+.textarea-box {
+  text-align: center;
+}
+
+#inputText {
+  width: 99%; height: 40vh;
+  margin: auto
+}
+
+input[type=number] {
+  width: 5ch;
+  border: 0.2em solid lightslategray;
+  border-radius: 0.4em;
+  vertical-align: middle;
+  font-family: monospace;
+}
+
+#markovOrder {
+  width: 2.5ch
+}
+
+span.error-message {
+  color: red
+}
+
+.bottom-box {
+  grid-column: 1 / -1;
+  background-color: lightslategray;
+  border-top: 0.15rem solid dimgray;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr;
+  grid-gap: 2px
+}
+
+.bottom-block {
+  padding: 10px;
+  text-align: center;
+  background-color: white;
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.bottom-block:hover {
+  font-size: 1.05rem
+}
+
+.bottom-block > h4 {
+  padding: 0; margin: 0
+}
+
+.bottom-block:nth-child(1), .bottom-block:nth-child(3) {
+  background-color: rgb(235, 235, 255);
+}

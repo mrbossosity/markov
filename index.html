@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./assets/style.css">
+  <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js'></script>
+  <script src="./assets/script.js" defer></script>
+  <title>Markov Language Generator</title>
+</head>
+<body>
+  <div class="container">
+    <div class="top-box">
+      <h1>Markov Chain Language Generator</h1>
+    </div>
+    <div class="left-box">
+      <form target="frame" id="markov-form">
+        <div class="textarea-box">
+          <textarea name="inputText" id="inputText" autofocus required></textarea>
+        </div>
+        <div>
+          <label for="markovOrder">Markov Order:</label>
+          <input type="number" name="markovOrder" id="markovOrder" value="2" min="1" required>
+        </div>
+        <div>
+          <label for="numStrings">Strings to Generate:</label>
+          <input type="number" name="numStrings" id="numStrings" value="10" required>
+          <label for="numWords">Words Per String:</label>
+          <input type="number" name="numWords" id="numWords" value="100" required>
+        </div> 
+        <div>
+          <button type="submit" id="submit">Go!</button>
+          <button type="button" id="goNew" style="display: none;">New Strings</button>
+        </div>
+      </form>
+    </div>
+    <div class="right-box">
+      <div id="text">
+        Text output will appear here!
+      </div>
+    </div>
+    <div class="bottom-box">
+      <a class="bottom-block" href="http://www.bowdoin.edu/~sharmon/courses/3725/fall20/labs/m2_markov-chains/" target="_blank"><h4>About Markov Chains</h4></a>
+      <a class="bottom-block" href="./assets/reagan-a-time-for-choosing.txt" target="_blank"><h4>Sample Input Text</h4></a>
+      <a class="bottom-block" href=""><h4>View Github</h4></a>
+    </div>
+  </div>
+  <iframe name="frame" src="" style="display: none;"></iframe>
+</body>
+</html>
